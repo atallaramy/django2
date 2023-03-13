@@ -1,0 +1,21 @@
+{% extends "main/base.html" %}
+{% block title %}<h1>Your post detail</h1>{% endblock %}
+{% block content %}
+<div class="card mt-2">
+    <div class="card-header">
+        <strong>@{{ post_detail.author.username }}</strong>
+    </div>
+    <div class="card-body d-flex flex-row justify-content-between">
+        <div>
+            <h5 class="card-title">{{post_detail.title}}</h5>
+            {% if user == post_detail.author %}
+            <p>{{post_detail.description}}</p>
+            <a href="/post_list">Back to home</a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="card-footer text-muted">
+        Created: {{post.created_at}}
+    </div>
+</div>
+{% endblock %}
