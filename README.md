@@ -7,3 +7,6 @@
   - Only logged in users can create posts.
   - Only a post author can update or delete it. 
 - The data are stored using postgresql data base on heroku.
+- While setting up your Virtual Environment do not forget to:
+  - python3 -m pip install psycopg2-binary
+  - python3 -m pip install crispy-bootstrap5
